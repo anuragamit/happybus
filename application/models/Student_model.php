@@ -130,11 +130,12 @@ $this->db->select('*');
 						}
 
 
-						public function savestudent(){
+						public function savestudent($data){
+						
 
 							$data['parents_hp_number'] = $this->input->post('parents_hp_number');
-							$data['student_photo'] = $this->input->post('student_photo');
-							$data['class'] = md5($this->input->post('class'));
+							$data['student_photo'] = $data['student_photo'];
+							$data['class'] = $this->input->post('class');
 							$data['address'] = $this->input->post('address');
 							$data['account_number'] = $this->input->post('account_number');
 							$data['account_name'] = $this->input->post('account_name');

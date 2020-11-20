@@ -11,6 +11,8 @@
     <link href="<?php echo base_url();?>assets/global/css/theme.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/global/css/ui.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/admin/layout1/css/layout.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/global/plugins/datatables/dataTables.min.css" rel="stylesheet">
+    
     <!-- BEGIN PAGE STYLE -->
     <link href="<?php echo base_url();?>assets/global/plugins/metrojs/metrojs.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/global/plugins/maps-amcharts/ammap/ammap.css" rel="stylesheet">

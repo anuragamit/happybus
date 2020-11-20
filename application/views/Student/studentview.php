@@ -1,126 +1,123 @@
   
    <!-- BEGIN PAGE CONTENT -->
-   <div class="page-content page-thin">
-     
-   <?php if($this->session->flashdata('msg')): ?>
+   <div class="page-content">
+          <div class="header">
+            <h2>Student <strong>View</strong></h2>
+            <div class="breadcrumb-wrapper">
+              <ol class="breadcrumb">
+                <li><a href="dashboard.html">Student</a>
+                </li>
+                <li><a href="tables.html">Student</a>
+                </li>
+                <li class="active">Student View</li>
+              </ol>
+            </div>
+          </div>
+         
+         
+          <div class="row">
+            <div class="col-lg-12 portlets ui-sortable">
+              <div class="panel">
+                <div class="panel-header panel-controls ui-sortable-handle">
+
+                <?php if($this->session->flashdata('msg')): ?>
     <p><?php echo $this->session->flashdata('msg'); ?></p>
 <?php endif; ?>
-          <div class="row">
-            <div class="col-md-12 portlets">
-              <div class="panel">
-                <div class="panel-header panel-controls">
-                  <h3><i class="fa fa-table"></i> <strong>View</strong> Student</h3>
                 
-                </div>
-              
-                
-                <div class="row">
-  <div class="col-sm-4">  Name : <input type="text" name="name"  id="name" value="">
-  <input type="submit" value="Search" id="username">
-</div>
-<div id='loader' style='display: none;'>
-  <img src='<?php echo base_url(); ?>assets/200.gif' width='32px' height='32px'>
-</div>
-  <div class="col-sm-4">  Email : <input type="text" name="email" id="email" value="">
-  <input type="submit" value="Search" id="useremail">
-</div>
-<div id='loader' style='display: none;'>
-  <img src='<?php echo base_url(); ?>assets/200.gif' width='32px' height='32px'>
-</div>
-  <div class="col-sm-4">  Mobile : <input type="text" name="mobile" id="mobile" value="">
-  <input type="submit" value="Search" id="usermobile">
-  <div id='loader' style='display: none;'>
-  <img src='<?php echo base_url(); ?>assets/200.gif' width='32px' height='32px'>
-</div>
-</div>
-</div>
+                  <h3><small>export to Excel, CSV, PDF or Print.</small></h3>
+               
+                 
+               
+               
+                  <div class="control-btn"><a href="#" class="panel-reload hidden"><i class="icon-reload"></i></a><a class="hidden" id="dropdownMenu1" data-toggle="dropdown"><i class="icon-settings"></i></a><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li></ul><a href="#" class="panel-popout hidden tt" title="Pop Out/In"><i class="icons-office-58"></i></a><a href="#" class="panel-maximize hidden"><i class="icon-size-fullscreen"></i></a><a href="#" class="panel-toggle"><i class="fa fa-angle-down"></i></a><a href="#" class="panel-close"><i class="icon-trash"></i></a></div></div>
                 <div class="panel-content">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>#</th>
-                        <th>Parents HP Number</th>
-                        <th>Student Photo</th>
-                        <th>Class</th>
-                        <th>Address</th>
-                        <th>Pick Up Points Coordinates</th>
+                  <div class="filter-left">
+                    <div id="DataTables_Table_1_wrapper" class="dataTables_wrapper form-inline dt-bootstrap">
+                      <div class="row"><div class="col-md-6">
                        
-                       
-                        <th>Create Date</th>
-                        <th>Action</th>
-                       
+                      </div>
+                      <div class="col-md-6">
+                            </div></div>
+                            <table class="table table-dynamic table-tools dataTable" data-table-name="Total users" id="DataTables_Table_1" role="grid" aria-describedby="DataTables_Table_1_info">
+                      <thead>
+                        <tr role="row">
+                          <th>Sr.No</th>
+                          
+                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style="width: 183px;">PARENTS HP NUMBER</th>
+                        <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 130px;"> PHOTO</th>
+                        <th class="hidden-350 sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 133px;">CLASS</th>
+                        <th class="hidden-1024 sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 162px;">CREATE DATE</th>
+                        <th class="hidden-480 sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="CSS grade: activate to sort column ascending" style="width: 115px;">ACTION</th></tr>
+                      </thead>
+                      <tbody>
                         
-                      </tr>
-                    </thead>
-                    <tbody  id="finalResult">
-                    <?php 
+                        
+                        
+                      <?php 
                      
                      foreach($MainArray as $key=> $val) {
-                      
                      
-                   
-                     
-                     
-                     
-                 
-
                       ?>
-                    <tr  <?php if ($key%2==0) { ?>  class="active" <?php } else {  ?>class="success" <?php }?>>
-                        <td><?=$key+1;?></td>
-                        <td><?=$val['parents_hp_number'];?></td>
-                        <td><?=$val['student_photo'];?></td>
-                        <td><?=$val['class'];?></td>
-                        <td><?=$val['address'];?></td>
-                        <td><?=$val['pick_up'];?></td>
-                        <td><?=$val['operation_time'];?></td>
                         
-                        <td class="text-right">
-                          <a class="edit btn btn-sm btn-default" href="<?php echo site_url('User/edituser/'.$val['id']); ?>">
-                          <i class="icon-note"></i>
-                          
-                        </a>  <a class="delete btn btn-sm btn-danger" href="<?php echo site_url('User/deleteuser/'.$val['id']); ?>">
-                          <i class="icons-office-52"></i></a>
-                        </td>
-                       
-                     
-
-                      <!-- <div class="m-b-10 f-left">
-                        <div class="btn-group">
-                        
-
-                          <button type="button" class="btn btn-dark">Action</button>
-                          <button type="button" class="btn btn-dark dropdown-toggle" data-toggle="dropdown">
-                          <span class="caret"></span>
-                          <span class="sr-only">Action</span>
+                      <tr <?php if ($key%2==0) { ?>  class="active" <?php } else {  ?>class="success" <?php }?> role="row" class="odd">
+                         <td><?=$key+1;?></td>
+                      <td class="sorting_1"><?=$val['parents_hp_number'];?></td>
+                          <td>     <img src="<?php echo base_url();?>uploads/<?=$val['student_photo'];?>"></td>
+                          <td class="hidden-350"><?=$val['class'];?></td>
+                          <td class="hidden-1024"><?=$val['operation_time'];?></td>
+                          <td class="hidden-480">
+                          <div class="btn-group">
+                          <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Action <span class="caret"></span>
                           </button>
                           <span class="dropdown-arrow"></span>
-                          <ul class="dropdown-menu" role="menu">
+               <ul class="dropdown-menu" role="menu">
                            
                             <li><a href="<?php echo site_url('User/edituser/'.$val['id']); ?>">Edit</a>
                             </li>
-                            <li><a href="<?php echo site_url('User/edituser/'.$val['id']); ?>">Delete</a>
-                            </li>
-                            <!-- <li><a href="#">Something else here</a>
+                            <li class="divider"></li>
+                            <li><a href="<?php echo site_url('User/deleteuser/'.$val['id']); ?>">Delete</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="#">Separated link</a>
+                            <li><a href="#">View</a>
                             </li>
                           </ul>
                         </div>
-                      </div> 
-                    </div>-->
+
+
+                          </td>
+                        </tr>
+                        <?php }?>
                       
+                      
+                      </tbody>
                      
-                    <?php }?>
-                    </tbody>
-                  </table>
+                    </table><div class="row">
+                      <div class="col-md-6">
+                       
+                      </div>
+                      <div class="spcol-md-6an6">
+                        <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_1_paginate">
+                          </div></div></div></div>
+                  </div>
                 </div>
               </div>
             </div>
-            
+          </div>
+          <div class="footer">
+            <div class="copyright">
+              <p class="pull-left sm-pull-reset">
+                <span>Copyright <span class="copyright">©</span> 2016 </span>
+                <span>THEMES LAB</span>.
+                <span>All rights reserved. </span>
+              </p>
+              <p class="pull-right sm-pull-reset">
+                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
+              </p>
             </div>
           </div>
-          </div>
+        </div>
+
+
          
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -232,12 +229,14 @@ $("#usermobile").click(function(){
 
 
          });
+
+
+
+
+
       </script>
 
-
-
-
-
+    
 
 
 

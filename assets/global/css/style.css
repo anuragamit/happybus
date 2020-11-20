@@ -4438,7 +4438,7 @@ body:not(.fixed-sidebar):not(.fixed-topbar):not(.sidebar-top) .sidebar .logopane
   display: none !important;
 }
 .main-content .page-content .panel table .btn-group {
-  z-index: 1;
+  
 }
 .main-content .page-content .panel .panel-close {
   font-size: 15px;

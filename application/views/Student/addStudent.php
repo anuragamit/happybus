@@ -12,16 +12,19 @@
             </div>
           </div>
           <div class="col-md-6 col-md-offset-3">
+
+
+        
         <?php echo $this->session->flashdata('verify_msg'); ?>
     </div>
           <div class="row">
             <div class="col-lg-12 portlets ui-sortable">
               <div class="panel">
                 <div class="panel-header panel-controls ui-sortable-handle">
-                  <h3><i class="icon-bulb"></i>   <strong>Student</strong></h3>
+                  <h3><i class="icon-bulb"></i> Add  <strong>Student</strong></h3>
                 <div class="control-btn"><a href="#" class="panel-reload hidden"><i class="icon-reload"></i></a><a class="hidden" id="dropdownMenu1" data-toggle="dropdown"><i class="icon-settings"></i></a><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li></ul><a href="#" class="panel-popout hidden tt" title="Pop Out/In"><i class="icons-office-58"></i></a><a href="#" class="panel-maximize hidden"><i class="icon-size-fullscreen"></i></a><a href="#" class="panel-toggle"><i class="fa fa-angle-down"></i></a><a href="#" class="panel-close"><i class="icon-trash"></i></a></div></div>
                 <div class="panel-content">
-                 <form action="<?php echo base_url(); ?>Student/addstudent" method="POST">
+                 <form action="<?php echo base_url(); ?>Student/addstudent" method="POST" enctype="multipart/form-data">
                   <div class="row">
                 
                   
@@ -33,7 +36,7 @@
                       </div>
                       <div class="form-group">
                         <label class="form-label">Student Photo</label>
-                        <input type="file" name="student_photo" class="form-control" placeholder="">
+                        <input type="file" name="student_photo" value="" class="form-control" placeholder="">
                         <span class="text-danger"><?php echo form_error('student_photo'); ?></span>
                       </div>
                       <div class="form-group">

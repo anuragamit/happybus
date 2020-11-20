@@ -642,6 +642,9 @@
     <script src="<?php echo base_url();?>assets/global/js/widgets/widget_weather.js"></script>
     <script src="<?php echo base_url();?>assets/global/js/pages/dashboard.js"></script>
     <!-- END PAGE SCRIPT -->
+    <script src="<?php echo base_url();?>assets/global/plugins/datatables/jquery.dataTables.min.js"></script> 
+    <script src="<?php echo base_url();?>assets/global/plugins/datatables/dataTables.bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/global/js/pages/table_dynamic.js"></script>
     <script src="<?php echo base_url();?>assets/admin/layout1/js/layout.js"></script>
   </body>
 </html>

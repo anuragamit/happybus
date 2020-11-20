@@ -12,6 +12,42 @@ class Student extends MY_Controller
   // $this->user_id = isset($this->session->get_userdata()['user_details'][0]->id)?$this->session->get_userdata()['user_details'][0]->users_id:'1';
  }
 
+ public function index()
+        {
+                $this->load->view('upload_form', array('error' => ' ' ));
+        }
+
+
+ public function do_upload()
+ {
+         $config['upload_path']          = './uploads/';
+         $config['allowed_types']        = 'gif|jpg|png';
+         $config['max_size']             = 100;
+         $config['max_width']            = 1024;
+         $config['max_height']           = 768;
+
+         $this->load->library('upload', $config);
+
+         if ( ! $this->upload->do_upload('student_photo'))
+         {
+                 $error = array('error' => $this->upload->display_errors());
+
+                // $this->load->view('upload_form', $error);
+         }
+         else
+         {
+                 $data = array('upload_data' => $this->upload->data());
+
+                 //$this->load->view('upload_success', $data);
+         }
+ }
+
+
+
+
+
+
+
  public function studentview()
  {
     $post    = $this->input->post();
@@ -187,11 +223,11 @@ echo "Data Not Record Found...";
 
 public function addstudent(){
 
-    
+
   
   // set form validation rules
   $this->form_validation->set_rules('parents_hp_number', 'Parents HP Number', 'trim|required');
-  $this->form_validation->set_rules('student_photo', 'Student Photo', 'trim|required');
+ // $this->form_validation->set_rules('student_photo', 'Student Photo', 'trim|required');
   $this->form_validation->set_rules('class', 'Class', 'trim|required');
   $this->form_validation->set_rules('address', 'Address', 'trim|required');
     $this->form_validation->set_rules('account_number', 'Account Number', 'trim|required');
@@ -221,12 +257,40 @@ public function addstudent(){
   else
   {
 
+    $config['upload_path']          = './uploads/';
+    $config['allowed_types']        = 'gif|jpg|png';
+    $config['max_size']             = 100;
+    $config['max_width']            = 1024;
+    $config['max_height']           = 768;
+  
+    $this->load->library('upload', $config);
+  
+    if ( ! $this->upload->do_upload('student_photo'))
+    {
+            $error = array('error' => $this->upload->display_errors());
+  
+           // $this->load->view('upload_form', $error);
+    }
+    else
+    {
+            $data = array('upload_data' => $this->upload->data());
+          
+           // print_r($data);
+          
+  
+  
+           // $this->load->view('upload_success', $data);
+    }
+  
+  
+
+
    
       //insert user details into db
       $data = array(
           'parents_hp_number' => $this->input->post('parents_hp_number'),
          
-          'student_photo' => $this->input->post('student_photo'),
+          'student_photo' => $data['upload_data']['file_name'],
          
           'class' => $this->input->post('class'),
           'address' => $this->input->post('address'),
@@ -248,6 +312,8 @@ public function addstudent(){
           'daily_update' => $this->input->post('daily_update')
          
       );
+     
+     
      
      
       if ($this->Student_model->savestudent($data))

@@ -18,13 +18,13 @@
             <div class="col-lg-12 portlets ui-sortable">
               <div class="panel">
                 <div class="panel-header panel-controls ui-sortable-handle">
-                  <h3><i class="icon-bulb"></i> Add  <strong>Student</strong></h3>
+                  <h3><i class="icon-bulb"></i>   <strong>Student</strong></h3>
                 <div class="control-btn"><a href="#" class="panel-reload hidden"><i class="icon-reload"></i></a><a class="hidden" id="dropdownMenu1" data-toggle="dropdown"><i class="icon-settings"></i></a><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li></ul><a href="#" class="panel-popout hidden tt" title="Pop Out/In"><i class="icons-office-58"></i></a><a href="#" class="panel-maximize hidden"><i class="icon-size-fullscreen"></i></a><a href="#" class="panel-toggle"><i class="fa fa-angle-down"></i></a><a href="#" class="panel-close"><i class="icon-trash"></i></a></div></div>
                 <div class="panel-content">
                  <form action="<?php echo base_url(); ?>Student/addstudent" method="POST">
                   <div class="row">
-
-                 
+                
+                  
                     <div class="col-md-6">
                       <div class="form-group">
                         <label class="form-label">Parents HP Number </label>

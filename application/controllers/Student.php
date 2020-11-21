@@ -257,11 +257,11 @@ public function addstudent(){
   else
   {
 
-    $config['upload_path']          = './uploads/';
-    $config['allowed_types']        = 'gif|jpg|png';
-    $config['max_size']             = 100;
-    $config['max_width']            = 1024;
-    $config['max_height']           = 768;
+    $config['upload_path']          = './assetsupload/';
+    $config['allowed_types']        = 'gif|jpg|png|jpeg';
+   // $config['max_size']             = 100;
+   // $config['max_width']            = 1024;
+    //$config['max_height']           = 768;
   
     $this->load->library('upload', $config);
   
@@ -331,10 +331,106 @@ public function addstudent(){
 
 }
 
+public function student_profile($id){
 
 
 
+  $data['MainArray']=$this->Student_model->studentprofile($id);
 
+
+  $this->load->view('include/main_header');
+  $this->load->view('Student/student_profile',$data);
+  $this->load->view('include/footer');
+
+
+
+}
+public function deletestudent($id){
+  $this->db->delete('student', array('id' => $id));
+  $this->session->set_flashdata('msg','<div class="alert alert-primary text-center">Success!!!</div>');
+  redirect('viewStudent');
+
+
+}
+public function editstudent($id){
+
+
+  $data['MainArray']=$this->Student_model->editstudent($id);
+
+  $this->load->view('include/main_header');
+  $this->load->view('Student/editStudent',$data);
+  $this->load->view('include/footer');
+
+
+}
+public function updatestudent(){
+ 
+
+
+ 
+  $id = $this->input->post('id');
+  $image_path=$this->input->post('student_photo');
+
+  $config['upload_path']          = './assetsupload/';
+  $config['allowed_types']        = 'gif|jpg|png|jpeg';
+ // $config['max_size']             = 100;
+ // $config['max_width']            = 1024;
+  //$config['max_height']           = 768;
+
+  $this->load->library('upload', $config);
+
+  if ( ! $this->upload->do_upload('student_photo'))
+  {
+          $error = array('error' => $this->upload->display_errors());
+
+         // $this->load->view('upload_form', $error);
+  }
+  else
+  {
+          $data = array('upload_data' => $this->upload->data());
+        
+         $image_path=$data['upload_data']['file_name'];
+        
+        
+
+
+         // $this->load->view('upload_success', $data);
+  }
+ 
+
+  $data = array(
+    'parents_hp_number' => $this->input->post('parents_hp_number'),
+   
+    'student_photo' => $image_path,
+    'class' => $this->input->post('class'),
+    'address' => $this->input->post('address'),
+    'account_number' => $this->input->post('account_number'),
+    'pick_up' => $this->input->post('pick_up'),
+    'account_name' => $this->input->post('account_name'),
+    'pick_up' => $this->input->post('pick_up'),
+    'account_name' => $this->input->post('account_name'),
+    'ifsc_code' => $this->input->post('ifsc_code'),
+    'hp_number' => $this->input->post('hp_number'),
+    'trips' => $this->input->post('trips'),
+    'guardian_number' => $this->input->post('guardian_number'),
+    'operation_time' => $this->input->post('operation_time'),
+    'drop_point' => $this->input->post('drop_point'),
+    'fees_trips' => $this->input->post('fees_trips'),
+    'bank_society' => $this->input->post('bank_society'),
+   
+    'tel_no' => $this->input->post('tel_no'),
+    'daily_update' => $this->input->post('daily_update')
+   
+);
+
+ 
+  $this->db->where('id', $id);
+  $this->db->update('student', $data);
+  $this->session->set_flashdata('msg', 'User Update Success..');
+  redirect('viewStudent');
+
+
+}
 
 
 }

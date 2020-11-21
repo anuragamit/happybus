@@ -163,6 +163,43 @@ $this->db->select('*');
 
 						}
 
+						public function studentprofile($id){
+
+						
+							$this->db->select('*');
+							$this->db->from('student');
+							$this->db->where('deleted', 'N');
+							$this->db->where('id', $id);
+						  
+							
+						
+							
+							$query = $this->db->get();
+							// echo  $this->db->last_query(); die;  
+					
+							if ($query->num_rows() > 0) {
+								return $query->result_array();
+							}
+
+
+
+						}
+						public function editstudent($id){
+							$this->db->select('*');
+							$this->db->from('student');
+							$this->db->where('deleted', 'N');
+							$this->db->where('id', $id);
+						     $query = $this->db->get();
+							// echo  $this->db->last_query(); die;  
+					
+							if ($query->num_rows() > 0) {
+								return $query->result_array();
+							}
+
+
+
+						}
+
 
 	
 }

@@ -62,7 +62,7 @@
                       <tr <?php if ($key%2==0) { ?>  class="active" <?php } else {  ?>class="success" <?php }?> role="row" class="odd">
                          <td><?=$key+1;?></td>
                       <td class="sorting_1"><?=$val['parents_hp_number'];?></td>
-                          <td>     <img src="<?php echo base_url();?>uploads/<?=$val['student_photo'];?>"></td>
+                          <td>     <img src="<?php echo base_url();?>assetsupload/<?=$val['student_photo'];?>" style="height:60px; width:60px;"></td>
                           <td class="hidden-350"><?=$val['class'];?></td>
                           <td class="hidden-1024"><?=$val['operation_time'];?></td>
                           <td class="hidden-480">
@@ -72,13 +72,21 @@
                           <span class="dropdown-arrow"></span>
                <ul class="dropdown-menu" role="menu">
                            
-                            <li><a href="<?php echo site_url('User/edituser/'.$val['id']); ?>">Edit</a>
+                            <li><a href="<?php echo site_url('Student/editstudent/'.$val['id']); ?>">Edit</a>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="<?php echo site_url('User/deleteuser/'.$val['id']); ?>">Delete</a>
+                            <li> <!--<a href="<?php// echo site_url('User/deleteuser/'.$val['id']); ?>">Delete</a> -->
+
+                            <?php echo anchor('Student/deletestudent/'.$val['id'], 'Delete', array('class'=>'delete', 'onclick'=>"return confirmDialog();")); ?>
+
+<script>
+function confirmDialog() {
+    return confirm("Are you sure you want to delete this record?")
+}
+</script>
                             </li>
                             <li class="divider"></li>
-                            <li><a href="#">View</a>
+                            <li><a href="<?php echo site_url('Student/student_profile/'.$val['id']); ?>">View</a>
                             </li>
                           </ul>
                         </div>
@@ -103,20 +111,7 @@
               </div>
             </div>
           </div>
-          <div class="footer">
-            <div class="copyright">
-              <p class="pull-left sm-pull-reset">
-                <span>Copyright <span class="copyright">©</span> 2016 </span>
-                <span>THEMES LAB</span>.
-                <span>All rights reserved. </span>
-              </p>
-              <p class="pull-right sm-pull-reset">
-                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
-              </p>
-            </div>
-          </div>
-        </div>
-
+         
 
          
           <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

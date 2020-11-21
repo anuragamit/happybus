@@ -1,185 +1,226 @@
-   <!-- BEGIN PAGE CONTENT -->
-
-   <div class="page-content">
+<div class="page-content">
           <div class="header">
-            <h2>Edit <strong>User</strong></h2>
+            <h2>Edit  <strong>Student</strong></h2>
             <div class="breadcrumb-wrapper">
               <ol class="breadcrumb">
-                <li><a href="#">Happy</a>
+                <li><a href="#">Student</a>
                 </li>
-                <li><a href="forms.html">Happy</a>
+                <li><a href="forms.html">Student</a>
                 </li>
-                <li class="active">Edit User</li>
-
-                
+                <li class="active">Edit Student</li>
               </ol>
             </div>
           </div>
+          <div class="col-md-6 col-md-offset-3">
+
+
+        
+        <?php echo $this->session->flashdata('verify_msg'); ?>
+    </div>
           <div class="row">
             <div class="col-lg-12 portlets ui-sortable">
               <div class="panel">
-                <div class="panel-header md-panel-controls ui-sortable-handle">
-                  <h3><i class="icon-bulb"></i>Edit <strong>User</strong></h3>
-                  <form action="<?php echo base_url(); ?>User/updateUser" method="POST">
-                <div class="control-btn"><a href="#" class="panel-reload hidden"><i class="mdi-av-replay"></i></a><a class="hidden" id="dropdownMenu1" data-toggle="dropdown"><i class="mdi-action-settings"></i></a><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li></ul><a href="#" class="panel-popout hidden tt" title="Pop Out/In"><i class="mdi-action-open-in-browser"></i></a><a href="#" class="panel-maximize hidden"><i class="mdi-action-launch"></i></a><a href="#" class="panel-toggle"><i class="mdi-navigation-expand-more"></i></a><a href="#" class="panel-close"><i class="mdi-action-delete"></i></a></div></div>
+                <div class="panel-header panel-controls ui-sortable-handle">
+                  <h3><i class="icon-bulb"></i> Edit <strong>Student</strong></h3>
+                <div class="control-btn"><a href="#" class="panel-reload hidden"><i class="icon-reload"></i></a><a class="hidden" id="dropdownMenu1" data-toggle="dropdown"><i class="icon-settings"></i></a><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li></ul><a href="#" class="panel-popout hidden tt" title="Pop Out/In"><i class="icons-office-58"></i></a><a href="#" class="panel-maximize hidden"><i class="icon-size-fullscreen"></i></a><a href="#" class="panel-toggle"><i class="fa fa-angle-down"></i></a><a href="#" class="panel-close"><i class="icon-trash"></i></a></div></div>
                 <div class="panel-content">
-                <input type="hidden" value="<?php echo $edituser['id'] ?>" name="id" class="form-control" placeholder="">
-                        <div class="row">
+                 <form action="<?php echo base_url(); ?>Student/updatestudent" method="POST" enctype="multipart/form-data">
+                  <div class="row">
+                <?php
+               // print_r($MainArray[0]);
+                //  print_r($MainArray[0]['parents_hp_number']);
+                  ?>
+    <input type="hidden" name="id" value="<?php echo $MainArray[0]['id']; ?>" class="form-control" placeholder="Enter Parents HP Number">
                     <div class="col-md-6">
-                      <div class="form-group" action="<?php echo base_url();?>User/updateuser" method="POST">
-                        <label class="form-label">Name</label>
-                        <input type="text" name="name" value="<?php echo $edituser['name'] ?>"class="form-control" placeholder="">
+                      <div class="form-group">
+                        <label class="form-label">Parents HP Number </label>
+                        <input type="text" name="parents_hp_number" value="<?php echo $MainArray[0]['parents_hp_number']; ?>" class="form-control" placeholder="Enter Parents HP Number">
+                        <span class="text-danger"><?php echo form_error('parents_hp_number'); ?></span>
                       </div>
                       <div class="form-group">
-                        <label class="form-label">Email</label>
-                        <input type="email" name="email" value="<?php echo $edituser['email'] ?>" class="form-control" placeholder="Enter credit card number">
+                        <label class="form-label">Student Photo</label>
+                        <img src="<?php echo base_url();?>assetsupload/<?php echo $MainArray[0]['student_photo']; ?>" style="height:60px; width:60px;">
+                        <input type="hidden" name="student_photo" value="<?php echo $MainArray[0]['student_photo']; ?>" class="form-control" placeholder="">
+                        <input type="file" name="student_photo" value="<?php echo $MainArray[0]['student_photo']; ?>" class="form-control" placeholder="">
+
+                       
+
+                        <span class="text-danger"><?php echo form_error('student_photo'); ?></span>
                       </div>
+                      <div class="form-group">
+                        <label class="form-label">Class</label>
+                        <input type="text"  name="class" value="<?php echo $MainArray[0]['class']; ?>"class="form-control" placeholder="Enter Class">
+                        <span class="text-danger"><?php echo form_error('class'); ?></span>
+                      </div>
+
                       <div class="form-group">
                         <label class="form-label">Address</label>
-                        <textarea class="form-control" name="address" value="<?php echo $edituser['address'] ?>" placeholder=""><?php echo $edituser['address'] ?></textarea>
+                        <textarea  name="address" value="<?php echo $MainArray[0]['address']; ?>" class="form-control" placeholder="Enter Address.... "><?php echo $MainArray[0]['address']; ?></textarea>
+                        <span class="text-danger"><?php echo form_error('address'); ?></span>
                       </div>
-                    
-                      
+
+
+                      <div class="form-group">
+                        <label class="form-label">Pick Up Points Coordinates</label>
+                        <input type="text"  name="pick_up" value="<?php echo $MainArray[0]['pick_up']; ?>" class="form-control" placeholder="Enter Pick Up Points Coordinates">
+                        <span class="text-danger"><?php echo form_error('pick_up'); ?></span>
+                      </div>
+
+                      <h3><i class="fa fa-inr"></i> Bank <strong>Detail</strong></h3>
+                      <div class="form-group">
+                        <label class="form-label">Account Number</label>
+                        <input type="number"  value="<?php echo $MainArray[0]['account_number']; ?>" name="account_number" class="form-control" placeholder="Enter Account Number">
+                        <span class="text-danger"><?php echo form_error('account_number'); ?></span>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label">Name On Account</label>
+                        <input type="text"  name="account_name" value="<?php echo $MainArray[0]['account_name']; ?>" class="form-control" placeholder="Enter Name On Account">
+                        <span class="text-danger"><?php echo form_error('account_name'); ?></span>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label">IFSC Code</label>
+                        <input type="text"  name="ifsc_code" value="<?php echo $MainArray[0]['ifsc_code']; ?>" class="form-control" placeholder="Enter Ifsc Code">
+                        <span class="text-danger"><?php echo form_error('ifsc_code'); ?></span>
+                      </div>
                     </div>
                     <div class="col-md-6">
-                      <div class="form-group">
-                        <label class="form-label">Phone</label>
-                        <input type="number" value="<?php echo $edituser['mob'] ?>" name="mob" class="form-control" placeholder="">
+                    <div class="form-group">
+                        <label class="form-label">HP Number</label>
+                        <input type="text"  name="hp_number" value="<?php echo $MainArray[0]['hp_number']; ?>" class="form-control" placeholder="Enter HP Number">
+                        <span class="text-danger"><?php echo form_error('hp_number'); ?></span>
                       </div>
+
                       <div class="form-group">
-                        <label class="form-label">Profile Picture</label>
-                        <input type="file"  class="form-control" placeholder="">
+                        <label class="form-label">Single</label>
+                        <?php if ($MainArray[0]['trips']==trips){
+                          ?>
+                           <input type="radio"  name="trips" checked value="trips" class="form-control">
+                           <span class="text-danger"><?php echo form_error('trips'); ?></span>
+                           <?php
+
+                        }else{?>
+                         <input type="radio"  name="trips"  value="trips" class="form-control">
+                           <span class="text-danger"><?php echo form_error('trips'); ?></span>
+
+
+<?php
+                        }
+?>
+                       
+
+                        <label class="form-label">Return Trips</label>
+                        <?php if ($MainArray[0]['trips']==return_trips){
+                          ?>
+                        <input type="radio"  name="trips" checked value="return_trips" class="form-control">
+                        <span class="text-danger"><?php echo form_error('trips'); ?></span>
+                        <?php
+
+}else{?>
+  <input type="radio"  name="trips"  value="return_trips" class="form-control">
+    <span class="text-danger"><?php echo form_error('trips'); ?></span>
+
+
+<?php
+ }
+?>
+
+
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="form-label">Guardian Contact Number Pickup & Drop Off</label>
+                        <input type="number"  name="guardian_number" value="<?php echo $MainArray[0]['guardian_number']; ?>" class="form-control" placeholder="Enter Guardian Contact Number Pickup & Drop Off">
+                        <span class="text-danger"><?php echo form_error('guardian_number'); ?></span>
+                      </div>
+                     
+
+                      <div class="form-group">
+                        <label class="form-label">Operation Timing</label>
+                        <input type="date"  name="operation_time"  value="<?php echo date("Y-m-d", strtotime($MainArray[0]['operation_time'])); ?>" class="form-control" placeholder="Enter Operation Time">
+                        <span class="text-danger"><?php echo form_error('operation_time'); ?></span>
                       </div>
                      
                       
-                    </div>
+                      <div class="form-group">
+                        <label class="form-label">Drop Off Point Coordinates For Return Trips</label>
+                        <input type="text"  name="drop_point"  value="<?php echo $MainArray[0]['drop_point']; ?>" class="form-control" placeholder="Enter Drop Off Point Coordinates For Return Trips">
+                        <span class="text-danger"><?php echo form_error('drop_point'); ?></span>
+                      </div>
 
+
+                      <div class="form-group">
+                      <?php if ($MainArray[0]['fees_trips']==fees_trips){
+                          ?>
+                        <label class="form-label">Fees  Single</label>
+                       
+                        <input type="radio" checked name="fees_trips" value="fees_trips" class="form-control">
+                        <span class="text-danger"><?php echo form_error('trips'); ?></span>
+                        <?php
+
+                        }else{?>
+
+                        <label class="form-label">Fees  Single</label>
+                        <input type="radio"  name="fees_trips" value="fees_trips" class="form-control">
+                        <span class="text-danger"><?php echo form_error('fees_trips'); ?></span>
+                    <?php
+                        }
                     
-                  </div>
-                  <button type="submit" value="submit" class="btn btn-primary btn-embossed">Save changes<div class="ripple-wrapper"></div></button>
-                </div>
-              </div>
-            </div>
-  </form>
-          </div>
-          <div class="footer">
-            <div class="copyright">
-              <p class="pull-left sm-pull-reset">
-                <span>Copyright <span class="copyright">©</span> 2016 </span>
-                <span>THEMES LAB</span>.
-                <span>All rights reserved. </span>
-              </p>
-              <p class="pull-right sm-pull-reset">
-                <span><a href="#" class="m-r-10">Support</a> | <a href="#" class="m-l-10 m-r-10">Terms of use</a> | <a href="#" class="m-l-10">Privacy Policy</a></span>
-              </p>
-            </div>
-          </div>
-        </div>
+                    ?>
+
+                      </div>
+
+                      <div class="form-group">
+                      <?php if ($MainArray[0]['fees_return_trips']==fees_return_trips){
+                          ?>
+                        <label class="form-label">Fees  Return Trips</label>
+                       
+                        <input type="radio" checked name="fees_trips" value="fees_return_trips" class="form-control">
+                        <span class="text-danger"><?php echo form_error('trips'); ?></span>
+                        <?php
+
+                        }else{?>
+
+                        <label class="form-label">Fees  Return Trips</label>
+                        <input type="radio"  name="fees_trips" value="fees_return_trips" class="form-control">
+                        <span class="text-danger"><?php echo form_error('fees_trips'); ?></span>
+                    <?php
+                        }
+                    
+                    ?>
+
+                      </div>
+
+
+
+                      <div class="form-group">
+                        <label class="form-label">Bank / Building Society Name</label>
+                        <input type="text"  name="bank_society"  value="<?php echo $MainArray[0]['bank_society']; ?>" class="form-control" placeholder="Enter Bank / Building Society Name">
+                        <span class="text-danger"><?php echo form_error('bank_society'); ?></span>
+                      </div>
+                      
+                      <div class="form-group">
+                        <label class="form-label">Tel No</label>
+                        <input type="text"  name="tel_no"  value="<?php echo $MainArray[0]['tel_no']; ?>" class="form-control" placeholder="Enter Telephone Number">
+                        <span class="text-danger"><?php echo form_error('tel_no'); ?></span>
+                      </div>
+
+                      <div class="form-group">
+                        <label class="form-label">Daily Update On Absence Or Special Arrengement</label>
+                        <input type="text"  name="daily_update"  value="<?php echo $MainArray[0]['daily_update']; ?>" class="form-control" placeholder="Enter Daily Update On Absence Or Special Arrengement">
+                        <span class="text-danger"><?php echo form_error('daily_update'); ?></span>
+                      </div>
+                      
+                      
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-   <div class="page-content">
-          <div class="header">
-            <h2>Edit <strong>User</strong></h2>
-            <div class="breadcrumb-wrapper">
-              <ol class="breadcrumb">
-                <li><a href="#">Home</a>
-                </li>
-                <li><a href="#">User</a>
-                </li>
-                <li class="active">Edit User</li>
-              </ol>
-            </div>
-          </div>
-          <div class="row">
-          
-            <div class="col-md-12">
-              <div class="panel panel-default no-bd">
-                <div class="panel-header bg-dark">
-                  <h2 class="panel-title"><strong>Edit</strong> User</h2>
-
-                  
-                </div>
-                <div class="panel-body bg-white">
-                  <div class="row">
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <form role="form" class="form-validation">
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="control-label">Name</label>
-                              <div class="append-icon">
-                                <input type="text" name="firstname" class="form-control" minlength="3" value="<?php echo $edituser['name'] ?>" placeholder="Minimum 3 characters..." required>
-                                <i class="icon-user"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                          <div class="form-group">
-                              <label class="control-label">Email Address</label>
-                              <div class="append-icon">
-                                <input type="email" name="email" class="form-control" value="<?php echo $edituser['email'] ?>"placeholder="Enter your email..." required>
-                                <i class="icon-envelope"></i>
-                              </div>
-                          </div>
-                        </div>
-                        </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="control-label">Phone Number</label>
-                              <div class="append-icon">
-                                <input type="text" name="mobile" value="<?php echo $edituser['mob'] ?>"" class="form-control" placeholder="Mobile Number..." minlength="3" required>
-                                <i class="icon-screen-smartphone"></i>
-                              </div>
-                            </div>
-                          </div>
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="control-label">Upload your avatar</label>
-                              <div class="file">
-                                <div class="option-group">
-                                  <span class="file-button btn-primary">Choose File</span>
-                                  <input type="file" class="custom-file" name="avatar" id="avatar" onchange="document.getElementById('uploader').value = this.value;" required>
-                                  <input type="text" class="form-control" id="uploader" placeholder="no file selected" readonly="">
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-
-                        <div class="row">
-                          <div class="col-sm-6">
-                            <div class="form-group">
-                              <label class="control-label">Password</label>
-                              <div class="append-icon">
-                                <input type="password" name="password" id="password" value="value="<?php echo $edituser['passcode'] ?>" class="form-control" placeholder="Between 4 and 16 characters" minlength="4" maxlength="16" required>
-                                <i class="icon-lock"></i>
-                              </div>
-                            </div>
-                          </div>
-                        
-                        </div>
-                        
-                        <div class="text-center  m-t-20">
-                          <button type="submit" class="btn btn-embossed btn-primary">Save</button>
-                          <button type="reset" class="cancel btn btn-embossed btn-default m-b-10 m-r-0">Cancel</button>
-                        </div>
-                      </form>
+                      <div class="form-group">
+                      <button type="submit" id="submit-form1" value="submit" class="btn btn-lg btn-dark m-t-20" data-style="expand-left">Register</button>
+                       
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -187,3 +228,4 @@
             </div>
           </div>
          
+        </div>

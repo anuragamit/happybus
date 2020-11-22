@@ -54,4 +54,42 @@ public function logout()
     redirect( base_url(), 'refresh');  
 } 
 
+
+public function clientlogin(){
+
+
+    $this->load->view('clientlogin');
+}
+
+public function clientauth(){
+
+    $post=$this->input->post();
+    
+  
+
+
+    $return=$this->Login_model->checkAuth($post);
+
+    
+
+   
+   
+    if(empty($return)) { 
+      // $this->session->set_flashdata('Error', 'Invalid details');  
+       $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Invalid details!!!</div>');
+       redirect( base_url(), 'refresh');  
+   } else 
+        {
+   
+           
+               $this->session->set_userdata($return);
+   
+            
+               
+          //print_r($this->session->userdata()['id']); exit;
+             redirect(base_url().'Home', 'refresh');//.$name);
+         }
+
+}
+
 }

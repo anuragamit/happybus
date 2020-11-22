@@ -40,18 +40,20 @@ https://templatemo.com/tm-557-grad-school
     <nav id="menu" class="main-nav" role="navigation">
       <ul class="main-menu">
         <li><a href="#section1">Home</a></li>
-        <li class="has-submenu"><a href="#section2">About Us</a>
-          <ul class="sub-menu">
+        <li><a href="#section2">About Us</a>
+         <!-- <ul class="sub-menu">
             <li><a href="#section2">Who we are?</a></li>
             <li><a href="#section3">What we do?</a></li>
             <li><a href="#section3">How it works?</a></li>
             <li><a href="https://templatemo.com/about" rel="sponsored" class="external">External URL</a></li>
-          </ul>
+          </ul> -->
         </li>
-        <li><a href="#section4">Courses</a></li>
+        <!--<li><a href="#section4">Courses</a></li> -->
         <!-- <li><a href="#section5">Video</a></li> -->
-        <li><a href="#section6">Contact</a></li>
-        <li><a href="https://templatemo.com" class="external">External</a></li>
+        <li><a href="#section6">Contact Us</a></li>
+        <li><a  href="<?php echo base_url(); ?>Clientlogin" class="external" target="_blank">Login</a></li>
+        <li><a  href="<?php echo base_url(); ?>signup" class="external" target="_blank">Signup</a></li>
+       <!-- <li><a href="https://templatemo.com" class="external">External</a></li> -->
       </ul>
     </nav>
   </header>
@@ -485,9 +487,9 @@ https://templatemo.com/tm-557-grad-school
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 by Grad School  
+          <p><i class="fa fa-copyright"></i> Copyright 2020 Happy Bus.All rights reserved.
           
-           | Design: <a href="" rel="sponsored" target="_parent">Abacus Dice</a></p>
+         </p>
         </div>
       </div>
     </div>

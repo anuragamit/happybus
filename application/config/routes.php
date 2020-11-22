@@ -51,13 +51,14 @@ defined('BASEPATH') or exit('No direct script access allowed');
  */
 
 $route['default_controller'] = 'Website';
-$route['Login'] = 'Login';
+$route['login'] = 'Login';
+$route['Clientlogin'] = 'Login/clientlogin';
 $route['AuthCheck'] = 'Login/AuthCheck';
 $route['logout'] = 'Login/logout';
 $route['school'] = 'User/View';
 $route['addschool'] = 'User/add';
 $route['userType'] = 'User/type';
-$route['client'] = 'Registration/index';
+$route['signup'] = 'Registration/index';
 $route['viewStudent'] = 'Student/studentview';
 $route['addalluser'] = 'User/addalluser';
 $route['addstudent'] = 'Student/addstudent';

@@ -107,6 +107,28 @@
               </ul>
             </li>
 
+            <li class="nav-parent">
+              <a href="#"><i class="icon-puzzle"></i><span>Add, operations</span></a>
+            
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="icon-puzzle"></i><span>Asset management</span></a>
+            
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="icon-puzzle"></i><span>HR management</span></a>
+            
+            </li>
+            <li class="nav-parent">
+              <a href="#"><i class="icon-puzzle"></i><span>Finance</span></a>
+            
+            </li>
+
+
+
+
+
+
 <?php
 
             }

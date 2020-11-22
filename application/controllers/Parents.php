@@ -202,7 +202,16 @@ public function addparent(){
 
 }
 
+public function clientlogin(){
 
+  $this->load->view('include/main_header');
+ $this->load->view('Parents/clientlogin');
+ $this->load->view('include/footer');
+
+
+
+  
+}
 
 
 }

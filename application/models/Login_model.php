@@ -9,27 +9,9 @@ class Login_model extends CI_Model {
 	
 	
 	public function checkAuth($dataArray=null) { 
-
-		if($dataArray['userType']==1 ){
-
-			$this->db->select('*');
-			$this->db->from('student');
-			$this->db->where("deleted", 'N');
-			$this->db->where("email",$dataArray['email'] );
-			$this->db->where("passcode",md5($dataArray['password'] ));
-			$this->db->where("userType",$dataArray['userType'] );
+	
 		
-			$query = $this->db->get();
-			//echo $this->db->last_query(); exit;
-			if($query->num_rows()>0)
-			{
-				
-				$data = $query->row_array();
-				return $data;
-			}
 
-		}
-		else{
 
 		
 
@@ -41,16 +23,19 @@ class Login_model extends CI_Model {
 		$this->db->where("userType",$dataArray['userType'] );
 	
 		$query = $this->db->get();
+
 		//echo $this->db->last_query(); exit;
 		if($query->num_rows()>0)
 		{
 			
 			$data = $query->row_array();
+			
+		
 			return $data;
 		}
 		//echo $this->db->last_query(); exit;
 	}
 	
-	}
+
 	
 }

@@ -64,6 +64,8 @@ public function clientlogin(){
 public function clientauth(){
 
     $post=$this->input->post();
+
+    
     
   
 

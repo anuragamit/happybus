@@ -45,7 +45,10 @@ class Registration extends CI_Controller
              'address' => $this->input->post('address'),
              'email' => $this->input->post('email'),
              'passcode' => $this->input->post('passcode'),
-             'mob' => $this->input->post('mob')
+             'mob' => $this->input->post('mob'),
+             'userType' => $this->input->post('userType'),
+             
+
          );
         
 
@@ -53,13 +56,13 @@ class Registration extends CI_Controller
          if ($this->Registration_model->saveClient($data))
          {
              $this->session->set_flashdata('msg','<div class="alert alert-success text-center">You are Successfully Registered! </div>');
-             redirect('Registration');
+             redirect('Home');
          }
          else
          {
              // error
              $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
-             redirect('Registration');
+             redirect('Home');
          }
      }
  }

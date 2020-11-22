@@ -9,12 +9,10 @@ class Login_model extends CI_Model {
 	
 	
 	public function checkAuth($dataArray=null) { 
+
+		
 	
 		
-
-
-		
-
 		$this->db->select('*');
 		$this->db->from('users');
 		$this->db->where("deleted", 'N');

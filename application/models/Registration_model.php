@@ -13,7 +13,8 @@ class Registration_model extends CI_Model {
 	   $data['name'] = $this->input->post('name');
 	   $data['email'] = $this->input->post('email');
 	   $data['passcode'] = md5($this->input->post('passcode'));
-       $data['mob'] = $this->input->post('mob');
+	   $data['mob'] = $this->input->post('mob');
+	   $data['userType'] = $this->input->post('userType');
        $data['address'] = $this->input->post('address');
 	   $this->db->insert('users', $data);
 	   return $data;

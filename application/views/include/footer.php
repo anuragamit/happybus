@@ -622,6 +622,7 @@
 
     
     <script src="<?php echo base_url();?>assets/global/plugins/jquery/jquery-3.1.0.min.js"></script>
+    <script src="<?php echo base_url();?>assets/admin/md-layout1/material-design/js/material.js"></script>
     <script src="<?php echo base_url();?>assets/global/plugins/jquery/jquery-migrate-3.0.0.min.js"></script>
     <script src="<?php echo base_url();?>assets/global/plugins/jquery-ui/jquery-ui.min.js"></script>
     <script src="<?php echo base_url();?>assets/global/plugins/gsap/main-gsap.min.js"></script>

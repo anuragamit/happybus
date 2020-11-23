@@ -10,7 +10,8 @@ class Student_model extends CI_Model {
 	public function viewstudent($data=null) {
 		$this->db->select('*');
 		$this->db->from('student');
-        $this->db->where('deleted', 'N');
+		$this->db->where('deleted', 'N');
+		$this->db->where('parent_id', '3');
       
 		
 		$this->db->order_by('id', 'DESC');
@@ -132,6 +133,8 @@ $this->db->select('*');
 
 						public function savestudent($data){
 						
+							$data['student_name'] = $this->input->post('student_name');
+							$data['parent_id'] = $this->input->post('parent_id');
 
 							$data['parents_hp_number'] = $this->input->post('parents_hp_number');
 							$data['student_photo'] = $data['student_photo'];

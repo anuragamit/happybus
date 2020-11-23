@@ -227,6 +227,7 @@ public function addstudent(){
   
   // set form validation rules
   $this->form_validation->set_rules('parents_hp_number', 'Parents HP Number', 'trim|required');
+  $this->form_validation->set_rules('student_name', 'Student Name', 'trim|required');
  // $this->form_validation->set_rules('student_photo', 'Student Photo', 'trim|required');
   $this->form_validation->set_rules('class', 'Class', 'trim|required');
   $this->form_validation->set_rules('address', 'Address', 'trim|required');
@@ -291,6 +292,8 @@ public function addstudent(){
           'parents_hp_number' => $this->input->post('parents_hp_number'),
          
           'student_photo' => $data['upload_data']['file_name'],
+          'parent_id' => $this->input->post('parent_id'),
+          'student_name' => $this->input->post('student_name'),
          
           'class' => $this->input->post('class'),
           'address' => $this->input->post('address'),

@@ -212,6 +212,32 @@ public function clientlogin(){
 
   
 }
+public function scheduleride(){
+
+
+  $data['scheduleride'] = $this->Parents_model->scheduleride();
+
+
+  $this->load->view('include/main_header');
+  $this->load->view('Parents/schedule_ride',$data);
+  $this->load->view('include/footer');
+
+}
+
+public function schedulemap(){
+
+
+
+  $this->load->view('include/main_header');
+  $this->load->view('Parents/schedule_map');
+  $this->load->view('include/footer');
+
+
+
+}
+
+
+
 
 
 }

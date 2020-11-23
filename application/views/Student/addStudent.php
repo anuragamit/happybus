@@ -25,10 +25,17 @@
                 <div class="control-btn"><a href="#" class="panel-reload hidden"><i class="icon-reload"></i></a><a class="hidden" id="dropdownMenu1" data-toggle="dropdown"><i class="icon-settings"></i></a><ul class="dropdown-menu pull-right" role="menu" aria-labelledby="dropdownMenu1"><li><a href="#">Action</a></li><li><a href="#">Another action</a></li><li><a href="#">Something else here</a></li></ul><a href="#" class="panel-popout hidden tt" title="Pop Out/In"><i class="icons-office-58"></i></a><a href="#" class="panel-maximize hidden"><i class="icon-size-fullscreen"></i></a><a href="#" class="panel-toggle"><i class="fa fa-angle-down"></i></a><a href="#" class="panel-close"><i class="icon-trash"></i></a></div></div>
                 <div class="panel-content">
                  <form action="<?php echo base_url(); ?>Student/addstudent" method="POST" enctype="multipart/form-data">
+                
+                 <input type="text" name="parent_id" value="<?php echo $this->session->userType;?>" class="form-control">
                   <div class="row">
                 
                   
                     <div class="col-md-6">
+                    <div class="form-group">
+                        <label class="form-label">Student Name </label>
+                        <input type="text" name="student_name" class="form-control" placeholder="Enter Student">
+                        <span class="text-danger"><?php echo form_error('student_name'); ?></span>
+                      </div>
                       <div class="form-group">
                         <label class="form-label">Parents HP Number </label>
                         <input type="text" name="parents_hp_number" class="form-control" placeholder="Enter Parents HP Number">

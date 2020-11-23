@@ -13,6 +13,8 @@
     <link href="<?php echo base_url();?>assets/admin/layout1/css/layout.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/global/plugins/datatables/dataTables.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/admin/md-layout4/material-design/css/material.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
+    <link href="<?php echo base_url();?>assets/global/plugins/rateit/rateit.css" rel="stylesheet">
     <!-- BEGIN PAGE STYLE -->
     <link href="<?php echo base_url();?>assets/global/plugins/metrojs/metrojs.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/global/plugins/maps-amcharts/ammap/ammap.css" rel="stylesheet">
@@ -152,7 +154,8 @@ if($this->session->userType==3){
               <ul class="children collapse">
                 <li><a href="<?=base_url();?>viewStudent">Student List</a></li>
                 <li><a href="<?=base_url();?>addstudent"> Add Student</a></li>
-                <li><a href="<?=base_url();?>addstudent"> Student Trips</a></li>
+               <!-- <li><a href="<?=base_url();?>addstudent"> Student Trips</a></li> -->
+                <li><a href="<?=base_url();?>scheduleride"> Schedule Ride</a></li>
                
               </ul>
             </li>

@@ -94,23 +94,25 @@ $this->db->select('*');
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+	public function scheduleride() {
+		$this->db->select('*');
+		$this->db->from('student');
+       
 		
-  
+		$query = $this->db->get();
+		// echo  $this->db->last_query(); die;  
 
+		if ($query->num_rows() > 0) {
+			return $query->result_array();
+		}
+	}
+
+
+
+}
 
 
 
 
 	
-}
+

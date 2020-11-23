@@ -67,6 +67,7 @@ $route['addParents'] = 'Parents/addparent';
 $route['factoryaddUser'] = 'Factory/addfactory';
 $route['factoryview'] = 'Factory/factoryview';
 $route['student_profile'] = 'Student/student_profile';
+$route['scheduleride'] = 'Parents/scheduleride';
 
 
 

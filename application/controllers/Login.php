@@ -67,7 +67,6 @@ public function clientauth(){
 
     
     
-  
 
 
     $return=$this->Login_model->checkAuth($post);

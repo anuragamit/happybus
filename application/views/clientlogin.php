@@ -31,7 +31,7 @@
                        
                             <div class="append-icon">
                                
-                            <input type="hidden" name="userType" value="2"  class="form-control form-white username" placeholder="" >
+                            <input type="hidden" name="userType" value="3"  class="form-control form-white username" placeholder="" >
                                 <input type="text" name="email" id="email" class="form-control form-white username" placeholder="Email" required>
                                 <i class="icon-user"></i>
                             </div>

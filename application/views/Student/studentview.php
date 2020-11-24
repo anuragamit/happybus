@@ -43,7 +43,7 @@
                         <tr role="row">
                           <th>Sr.No</th>
                           
-                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style="width: 183px;">PARENTS HP NUMBER</th>
+                        <th class="sorting_asc" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Rendering engine: activate to sort column descending" aria-sort="ascending" style="width: 183px;">STUDENT NAME</th>
                         <th class="sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Browser: activate to sort column ascending" style="width: 130px;"> PHOTO</th>
                         <th class="hidden-350 sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Platform(s): activate to sort column ascending" style="width: 133px;">CLASS</th>
                         <th class="hidden-1024 sorting" tabindex="0" aria-controls="DataTables_Table_1" rowspan="1" colspan="1" aria-label="Engine version: activate to sort column ascending" style="width: 162px;">CREATE DATE</th>
@@ -61,7 +61,7 @@
                         
                       <tr <?php if ($key%2==0) { ?>  class="active" <?php } else {  ?>class="success" <?php }?> role="row" class="odd">
                          <td><?=$key+1;?></td>
-                      <td class="sorting_1"><?=$val['parents_hp_number'];?></td>
+                      <td class="sorting_1"><?=$val['student_name'];?></td>
                           <td>     <img src="<?php echo base_url();?>assetsupload/<?=$val['student_photo'];?>" style="height:60px; width:60px;"></td>
                           <td class="hidden-350"><?=$val['class'];?></td>
                           <td class="hidden-1024"><?=$val['operation_time'];?></td>

@@ -228,9 +228,9 @@ public function schedulemap(){
 
 
 
-  $this->load->view('include/main_header');
+ // $this->load->view('include/main_header');
   $this->load->view('Parents/schedule_map');
-  $this->load->view('include/footer');
+  //$this->load->view('include/footer');
 
 
 

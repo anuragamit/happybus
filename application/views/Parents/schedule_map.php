@@ -37,7 +37,7 @@
       }
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script
+    <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
       defer
     ></script>-$_REQUEST

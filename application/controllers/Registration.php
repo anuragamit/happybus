@@ -51,18 +51,19 @@ class Registration extends CI_Controller
 
          );
         
+        
 
         
          if ($this->Registration_model->saveClient($data))
          {
-             $this->session->set_flashdata('msg','<div class="alert alert-success text-center">Register Successfully .Please Login... P</div>');
-             redirect('Home');
+             $this->session->set_flashdata('msg','<div class="alert alert-success text-center">Register Successfully .Please Login... </div>');
+             redirect('Clientlogin');
          }
          else
          {
              // error
              $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
-             redirect('Home');
+             redirect('Registration');
          }
      }
  }

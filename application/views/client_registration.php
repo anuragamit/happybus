@@ -29,7 +29,7 @@
 
                         <form class="form-signup" method="POST" action="<?php echo base_url(); ?>registration/index" role="form">
 
-                        <input type="hidden" name="userType" value="2" id="name" class="form-control form-white name" placeholder="Name" >
+                        <input type="hidden" name="userType" value="3" id="name" class="form-control form-white name" placeholder="Name" >
 
                             <div class="row">
                                 <div class="col-sm-6">

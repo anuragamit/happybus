@@ -11,8 +11,8 @@ class Student_model extends CI_Model {
 		$this->db->select('*');
 		$this->db->from('student');
 		$this->db->where('deleted', 'N');
-		$this->db->where('parent_id', '3');
-      
+		$this->db->where('parent_id', $this->session->id);
+	
 		
 		$this->db->order_by('id', 'DESC');
 		

@@ -53,6 +53,9 @@ class Student extends MY_Controller
     $post    = $this->input->post();
     $data['MainArray']=$this->Student_model->viewstudent($post );
 
+    //print_r($data['MainArray']);
+    //die();
+
 
     $this->load->view('include/main_header');
     $this->load->view('Student/studentview',$data);

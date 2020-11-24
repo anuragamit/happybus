@@ -14,6 +14,7 @@ class Website extends CI_Controller
 
  public function index()
         {
-                $this->load->view('website/website');
+               // $this->load->view('website/website');
+               $this->load->view('website/comming');
         }
     }

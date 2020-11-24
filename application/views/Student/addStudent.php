@@ -26,7 +26,7 @@
                 <div class="panel-content">
                  <form action="<?php echo base_url(); ?>Student/addstudent" method="POST" enctype="multipart/form-data">
                 
-                 <input type="text" name="parent_id" value="<?php echo $this->session->userType;?>" class="form-control">
+                 <input type="hidden" name="parent_id" value="<?php echo $this->session->id;?>" class="form-control">
                   <div class="row">
                 
                   

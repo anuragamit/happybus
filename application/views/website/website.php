@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <title>Grad School HTML5 Template</title>
+    <title>Happy Bus Sg</title>
     
     <!-- Bootstrap core CSS -->
     <link href="<?php echo base_url();?>assets/website/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -34,7 +34,7 @@ https://templatemo.com/tm-557-grad-school
   <!--header-->
   <header class="main-header clearfix" role="header">
     <div class="logo">
-      <a href="#"><em>Happy</em> Bus</a>
+      <a href="#"><em>HAPPYBus</em>.SG</a>
     </div>
     <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
     <nav id="menu" class="main-nav" role="navigation">
@@ -66,8 +66,8 @@ https://templatemo.com/tm-557-grad-school
 
       <div class="video-overlay header-text">
           <div class="caption">
-              <h6>Graduate School of Management</h6>
-              <h2><em>Your</em> Classroom</h2>
+              <h6>A PLATFORM FOR BUSES</h6>
+              <h2><em>Your</em> HAPPYBUS</h2>
               <div class="main-button">
                   <div class="scroll-to-section"><a href="#section2">Discover more</a></div>
               </div>
@@ -84,13 +84,13 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-pencil"></i>All Courses</h4>
+                <h4>Bus Owners</h4>
               </div>
-              <div class="content-hide">
+             <!-- <div class="content-hide">
                 <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section2">More Info.</a></div>
-            </div>
+            </div> -->
             </div>
           </div>
         </div>
@@ -98,13 +98,13 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post second-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-graduation-cap"></i>Virtual Class</h4>
+                <h4></i>SCHOOLS</h4>
               </div>
-              <div class="content-hide">
+             <!-- <div class="content-hide">
                 <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section3">Details</a></div>
-            </div>
+            </div> -->
             </div>
           </div>
         </div>
@@ -112,13 +112,13 @@ https://templatemo.com/tm-557-grad-school
           <div class="features-post third-features">
             <div class="features-content">
               <div class="content-show">
-                <h4><i class="fa fa-book"></i>Real Meeting</h4>
+                <h4>PARENTS</h4>
               </div>
-              <div class="content-hide">
+             <!-- <div class="content-hide">
                 <p>Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet. Donec maximus elementum ex. Cras convallis ex rhoncus, laoreet libero eu, vehicula libero.</p>
                 <p class="hidden-sm">Curabitur id eros vehicula, tincidunt libero eu, lobortis mi. In mollis eros a posuere imperdiet.</p>
                 <div class="scroll-to-section"><a href="#section4">Read More</a></div>
-            </div>
+            </div> -->
             </div>
           </div>
         </div>
@@ -131,25 +131,27 @@ https://templatemo.com/tm-557-grad-school
       <div class="row">
         <div class="col-md-12">
           <div class="section-heading">
-            <h2>Why choose Grad School?</h2>
+           
           </div>
         </div>
         <div class="col-md-12">
           <div id='tabs'>
             <ul>
-              <li><a href='#tabs-1'>Best Education</a></li>
-              <li><a href='#tabs-2'>Top Management</a></li>
-              <li><a href='#tabs-3'>Quality Meeting</a></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
             <section class='tabs-content'>
               <article id='tabs-1'>
                 <div class="row">
                   <div class="col-md-6">
-                    <img src="assets/images/choose-us-image-01.png" alt="">
+                  <h4><i class="fa fa-bus"></i></h4>
+                   
                   </div>
                   <div class="col-md-6">
-                    <h4>Best Education</h4>
-                    <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
+                    <h4>About Us</h4>
+                   <!-- <p>Grad School is free educational HTML template with Bootstrap 4.5.2 CSS layout. Feel free to use it for educational or commercial purposes. You may want to make <a href="https://paypal.me/templatemo" target="_parent" rel="sponsored">a little donation</a> to TemplateMo. Please tell your friends about us. Thank you.</p>
+                   -->
                   </div>
                 </div>
               </article>
@@ -158,11 +160,11 @@ https://templatemo.com/tm-557-grad-school
                   <div class="col-md-6">
                     <img src="assets/images/choose-us-image-02.png" alt="">
                   </div>
-                  <div class="col-md-6">
+                  <!--<div class="col-md-6">
                     <h4>Top Level</h4>
                     <p>You can modify this HTML layout by editing contents and adding more pages as you needed. Since this template has options to add dropdown menus, you can put many HTML pages.</p> 
                     <p>Suspendisse tincidunt, magna ut finibus rutrum, libero dolor euismod odio, nec interdum quam felis non ante.</p>
-                  </div>
+                  </div> -->
                 </div>
               </article>
               <article id='tabs-3'>
@@ -170,10 +172,10 @@ https://templatemo.com/tm-557-grad-school
                   <div class="col-md-6">
                     <img src="assets/images/choose-us-image-03.png" alt="">
                   </div>
-                  <div class="col-md-6">
+                <!--  <div class="col-md-6">
                     <h4>Quality Meeting</h4>
                     <p>You are NOT allowed to redistribute this template ZIP file on any template collection website. However, you can use this template to convert into a specific theme for any kind of CMS platform such as WordPress. For more information, you shall <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact TemplateMo</a> now.</p>
-                  </div>
+                  </div> -->
                 </div>
               </article>
             </section>
@@ -183,7 +185,7 @@ https://templatemo.com/tm-557-grad-school
     </div>
   </section>
 
-  <section class="section coming-soon" data-section="section3">
+  <!--<section class="section coming-soon" data-section="section3">
     <div class="container">
       <div class="row">
         <div class="col-md-7 col-xs-12">
@@ -249,7 +251,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
       </div>
     </div>
-  </section>
+  </section> 
 
   <section class="section courses" data-section="section4">
     <div class="container-fluid">
@@ -406,7 +408,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
       </div>
     </div>
-  </section>
+  </section> 
   
 
   <section class="section video" data-section="section5">
@@ -433,7 +435,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="section contact" data-section="section6">
     <div class="container">
@@ -476,7 +478,7 @@ https://templatemo.com/tm-557-grad-school
         </div>
         <div class="col-md-6">
           <div id="map">
-            <iframe src="https://maps.google.com/maps?q=Av.+L%C3%BAcio+Costa,+Rio+de+Janeiro+-+RJ,+Brazil&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height="422px" frameborder="0" style="border:0" allowfullscreen></iframe>
+          <iframe src="https://www.google.com/maps/d/embed?mid=1Xbkrh789WSsHPBfq4_JpXs5EV2g" width="640" height="480"></iframe>
           </div>
         </div>
       </div>
@@ -487,7 +489,7 @@ https://templatemo.com/tm-557-grad-school
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <p><i class="fa fa-copyright"></i> Copyright 2020 Happy Bus.All rights reserved.
+          <p><i class="fa fa-copyright"></i> Copyright 2020 <a href="https://www.happybus.sg/">HAPPYBUS.SG </a> All rights reserved.
           
          </p>
         </div>

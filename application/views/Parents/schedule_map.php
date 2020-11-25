@@ -38,7 +38,7 @@
     </style>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIwzALxUPNbatRBj3Xi1Uhp0fFzwWNBkE&callback=initMap&libraries=&v=weekly"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDNyLsAhFt4hIZKeNJYC244jPPayM0GhrY&callback=initMap&libraries=&v=weekly"
       defer
     ></script>-$_REQUEST
     
@@ -64,6 +64,8 @@
       }
 
       function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+
+        alert();
         directionsService.route(
           {
             origin: {

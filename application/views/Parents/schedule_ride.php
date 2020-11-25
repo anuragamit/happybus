@@ -28,7 +28,7 @@
                 <div class="row">
   <div class="col-sm-6"> <div class="form-group">
                         <label class="form-label">One Way Trip</label>
-                        <input type="radio" name="schedule_ride" class="form-control" placeholder="Enter Name">
+                        <input type="radio" name="schedule_ride" class="form-control" placeholder="Enter Name" required="required">
                         <span class="text-danger"><?php echo form_error('name'); ?></span>
                     
                         <label class="form-label">Round Way</label>
@@ -46,27 +46,18 @@
 
                       <div class="col-sm-6"> <div class="form-group">
                      
-  <select class="select2" multiple="" data-placeholder="Select a Student" style="width:330px;"  data-select2-id="7" tabindex="-1" aria-hidden="true">
+  <select class="select2" multiple="" data-placeholder="Select a Student" style="width:330px;"  data-select2-id="7" tabindex="-1" aria-hidden="true" required>
   <?php 
-                     
-                     foreach($scheduleride as $key=> $val) {
-
-                        print_r($val);
-                   ?>
-
-  <option data-select2-id="29"><?php echo $val['student_name']; ?></option>
-
-
+   foreach($scheduleride as $key=> $val) {
+?>
+<option data-select2-id="29"><?php echo $val['student_name']; ?></option>
 <?php
-                     }
+}
 
 ?>
 </select>
                        
-                     
-                    
-
-  
+ 
 </div>
 <button type="submit" value="submit" class="btn btn-primary m-t-20">Go!<div class="ripple-wrapper"></div></button>
 

@@ -27,7 +27,7 @@
         <?php echo $this->session->flashdata('verify_msg'); ?>
     </div>
 
-                        <form class="form-signup" method="POST" action="<?php echo base_url(); ?>registration/index" role="form">
+                        <form class="form-signup" method="POST" action="<?php echo base_url(); ?>registration/factoryregistration" role="form">
 
                         <input type="hidden" name="userType" value="4" id="name" class="form-control form-white name" placeholder="Name" >
 

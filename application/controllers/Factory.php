@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 
-class Factory extends MY_Controller
+class Factory extends CI_Controller
 {
 
  public function __construct()
@@ -17,6 +17,11 @@ public function factory_register(){
 
 
     $this->load->view('factory/factory_register');
+
+
+
+}
+public function factory_login(){
 
 
 

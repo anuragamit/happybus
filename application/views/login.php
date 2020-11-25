@@ -43,9 +43,9 @@
                     </div>
                     <div class="append-icon m-b-20">
                         <select  name="userType" class="form-control form-white password" placeholder="" required>
-                        <option>Select User</option>
+                       <!-- <option>Select User</option> -->
                        <!-- <option value="3">Parent</option> -->
-                        <option value="4" >Factory</option>
+                        <!--<option value="4" >Factory</option> -->
                         <option value="2">School</option>
                        <!-- <option value="1">Student</option> -->
 

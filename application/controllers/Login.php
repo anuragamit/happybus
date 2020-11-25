@@ -94,4 +94,44 @@ public function clientauth(){
 
 }
 
+
+public function factory_login(){
+
+
+    $this->load->view('factory/factory_login');
+}
+
+public function factoryauth(){
+
+    $post=$this->input->post();
+   
+
+    $return=$this->Login_model->checkAuth($post);
+
+    
+
+   
+   
+    if(empty($return)) { 
+      // $this->session->set_flashdata('Error', 'Invalid details');  
+       $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Invalid details!!!</div>');
+       redirect( base_url().'Clientlogin', 'refresh');  
+   } else 
+        {
+   
+           
+               $this->session->set_userdata($return);
+   
+            
+               
+          //print_r($this->session->userdata()['id']); exit;
+             redirect(base_url().'Home', 'refresh');//.$name);
+         }
+
+}
+
+
+
+
+
 }

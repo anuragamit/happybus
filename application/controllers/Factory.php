@@ -7,16 +7,21 @@ class Factory extends MY_Controller
  public function __construct()
  {
   parent::__construct();
-
-
-  
- 
-  $this->load->model('Factory_model');
+$this->load->model('Factory_model');
   $this->load->model('User_model');
 
 
   // $this->user_id = isset($this->session->get_userdata()['user_details'][0]->id)?$this->session->get_userdata()['user_details'][0]->users_id:'1';
  }
+public function factory_register(){
+
+
+    $this->load->view('factory/factory_register');
+
+
+
+}
+
 
  public function factoryview()
  {

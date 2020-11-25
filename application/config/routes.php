@@ -51,7 +51,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
  */
 
 $route['default_controller'] = 'Website/comming';
-$route['Website'] = 'Website';
+$route['demo'] = 'Website';
 $route['login'] = 'Login';
 $route['Clientlogin'] = 'Login/clientlogin';
 $route['AuthCheck'] = 'Login/AuthCheck';
@@ -67,6 +67,8 @@ $route['parentView'] = 'Parents/parentsview';
 $route['addParents'] = 'Parents/addparent';
 $route['factoryaddUser'] = 'Factory/addfactory';
 $route['factoryview'] = 'Factory/factoryview';
+$route['factoryRegister'] = 'Factory/factory_register';
+$route['factoryLogin'] = 'Login/factory_login';
 $route['student_profile'] = 'Student/student_profile';
 $route['scheduleride'] = 'Parents/scheduleride';
 

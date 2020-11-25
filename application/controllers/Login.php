@@ -115,7 +115,7 @@ public function factoryauth(){
     if(empty($return)) { 
       // $this->session->set_flashdata('Error', 'Invalid details');  
        $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Invalid details!!!</div>');
-       redirect( base_url().'Clientlogin', 'refresh');  
+       redirect( base_url().'factoryLogin', 'refresh');  
    } else 
         {
    

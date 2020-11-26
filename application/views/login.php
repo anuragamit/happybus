@@ -41,21 +41,12 @@
                         <input type="password" name="password" class="form-control form-white password" placeholder="Password" required>
                         <i class="icon-lock"></i>
                     </div>
-                    <div class="append-icon m-b-20">
-                        <select  name="userType" class="form-control form-white password" placeholder="" required>
-                       <!-- <option>Select User</option> -->
-                       <!-- <option value="3">Parent</option> -->
-                        <!--<option value="4" >Factory</option> -->
-                        <option value="2">School</option>
-                       <!-- <option value="1">Student</option> -->
 
-                        </select>
+                    <div class="append-icon m-b-20">
+                        <input type="hidden" name="userType" value="2" class="form-control form-white password" placeholder="Password" required>
                         <i class="icon-lock"></i>
                     </div>
-
-
-
-
+                   
                     <button type="submit" class="btn btn-lg btn-dark btn-rounded ladda-button" data-style="expand-left">Sign In</button>
                     <span class="forgot-password"><a id="password" href="account-forgot-password.html">Forgot password?</a></span>
                     <div class="form-footer">

@@ -100,7 +100,7 @@
 ?>
 
               <li class="nav-parent">
-              <a href="#"><i class="icon-puzzle"></i><span>School Management</span> <span class="fa arrow"></span></a>
+              <a href="#"><i class="icon-puzzle"></i><span>Operation Management</span> <span class="fa arrow"></span></a>
               <ul class="children collapse">
                 <li><a href="<?=base_url();?>school">School List</a></li>
                 <li><a href="<?=base_url();?>addschool"> Add School</a></li>
@@ -110,21 +110,25 @@
             </li>
 
             <li class="nav-parent">
-              <a href="#"><i class="icon-puzzle"></i><span>Add, operations</span></a>
-            
+              <a href="#"><i class="icon-puzzle"></i><span>Parents Management</span></a>
+              <ul class="children collapse">
+                <li><a href="<?=base_url();?>Operation/parentlist">Parents List</a></li>
+              
+              
+              </ul>
             </li>
-            <li class="nav-parent">
+           <!--<li class="nav-parent">
               <a href="#"><i class="icon-puzzle"></i><span>Asset management</span></a>
             
-            </li>
-            <li class="nav-parent">
+            </li> -->
+           <!-- <li class="nav-parent">
               <a href="#"><i class="icon-puzzle"></i><span>HR management</span></a>
             
-            </li>
-            <li class="nav-parent">
+            </li> -->
+            <!--<li class="nav-parent">
               <a href="#"><i class="icon-puzzle"></i><span>Finance</span></a>
             
-            </li>
+            </li> -->
 
 
 
@@ -172,6 +176,17 @@ if($this->session->userType==4){
               <ul class="children collapse">
                 <li><a href="<?=base_url();?>factoryview">Factory List</a></li>
                 <li><a href="<?=base_url();?>factoryaddUser"> Add Factory</a></li>
+               
+              </ul>
+            </li>
+            
+            <li class="nav-parent">
+              <a href="#"><i class="icon-puzzle"></i><span>Contractor Management</span> <span class="fa arrow"></span></a>
+              <ul class="children collapse">
+                <li><a href="<?=base_url();?>Factory/addContractor">Add Contractor</a></li>
+                <li><a href="<?=base_url();?>factoryview">Contractor List</a></li>
+                <li><a href="<?=base_url();?>factoryaddUser"> Add Sub Contractor</a></li>
+                <li><a href="<?=base_url();?>factoryaddUser">Sub Contractor List</a></li>
                
               </ul>
             </li>

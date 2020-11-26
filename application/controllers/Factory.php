@@ -96,6 +96,48 @@ public function addfactory(){
 }
 
 
+public function addContractor(){
+
+ 
+  
+  // set form validation rules
+  $this->form_validation->set_rules('contractor_name', 'Contractor Name', 'trim|required');
+ 
+  // submit
+  if ($this->form_validation->run() == FALSE)
+  {
+      // fails
+     // $this->load->view('client_registration');
+     $this->load->view('include/main_header');
+ $this->load->view('factory/factory');
+ $this->load->view('include/footer');
+  }
+  
+  else
+  {
+
+   
+      //insert user details into db
+      $data = array(
+          'contractor_name' => $this->input->post('contractor_name'),
+        
+      );
+     
+     
+      if ($this->Factory_model->saveContractor($data))
+      {
+          $this->session->set_flashdata('msg','<div class="alert alert-success text-center">You are Successfully Added! </div>');
+          redirect('factoryview');
+      }
+      else
+      {
+          // error
+          $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
+          redirect('factoryview');
+      }
+  }
+
+}
 
 
 }

@@ -65,7 +65,7 @@
 
       function calculateAndDisplayRoute(directionsService, directionsRenderer) {
 
-        alert();
+       
         directionsService.route(
           {
             origin: {

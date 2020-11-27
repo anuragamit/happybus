@@ -67,6 +67,10 @@ $route['parentView'] = 'Parents/parentsview';
 $route['addParents'] = 'Parents/addparent';
 $route['factoryaddUser'] = 'Factory/addfactory';
 $route['factoryview'] = 'Factory/factoryview';
+$route['addContractor'] = 'Factory/addContractor';
+$route['contractorview'] = 'Factory/contractorview';
+$route['addsubontractor'] = 'Factory/addsubontractor';
+
 $route['factoryRegister'] = 'Registration/factoryregistration';
 $route['factoryLogin'] = 'Login/factory_login';
 $route['student_profile'] = 'Student/student_profile';

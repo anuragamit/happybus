@@ -53,7 +53,7 @@
       <div class="sidebar">
         <div class="logopanel">
           <h1>
-            <a href="dashboard.html"></a>
+            <a href="dashboard.html">Happybus</a>
           </h1>
         </div>
         <div class="sidebar-inner">
@@ -183,8 +183,8 @@ if($this->session->userType==4){
             <li class="nav-parent">
               <a href="#"><i class="icon-puzzle"></i><span>Contractor Management</span> <span class="fa arrow"></span></a>
               <ul class="children collapse">
-                <li><a href="<?=base_url();?>Factory/addContractor">Add Contractor</a></li>
-                <li><a href="<?=base_url();?>factoryview">Contractor List</a></li>
+                <li><a href="<?=base_url();?>addContractor">Add Contractor</a></li>
+                <li><a href="<?=base_url();?>contractorview">Contractor List</a></li>
                 <li><a href="<?=base_url();?>factoryaddUser"> Add Sub Contractor</a></li>
                 <li><a href="<?=base_url();?>factoryaddUser">Sub Contractor List</a></li>
                

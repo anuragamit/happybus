@@ -39,7 +39,7 @@
                       </div>
                       <div class="form-group">
                         <label class="form-label">Identity </label>
-                        <input type="text" name="identity" class="form-control" placeholder="Enter Identity">
+                        <input type="file" name="identity" class="form-control" placeholder="Enter Identity">
                         <span class="text-danger"><?php echo form_error('identity'); ?></span>
                       </div>
                     

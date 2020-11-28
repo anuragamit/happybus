@@ -44,9 +44,9 @@
                         <th>Address</th>
                         <th>Mobile</th>
                         <th>Status</th>
-                        <th>User Type</th>
+                       <!-- <th>User Type</th> -->
                         <th>Create Date</th>
-                        <th>Action</th>
+                      <!--  <th>Action</th> -->
                        
                         
                       </tr>
@@ -71,18 +71,18 @@
                         <td><?=$val['address'];?></td>
                         <td><?=$val['mob'];?></td>
                         <td><?=$val['status'];?></td>
-                        <td>
+                       <!--  <td>
                       
                         
-                        <?=$val['userType'];?></td>
-                        <td><?=$val['createDate'];?></td>
-                        <td class="text-right">
+                        <?//=$val['userType'];?></td> -->
+                        <td><?=$val['createDate'];?></td> 
+                       <!-- <td class="text-right">
                           <a class="edit btn btn-sm btn-default" href="<?php echo site_url('User/edituser/'.$val['id']); ?>">
                           <i class="icon-note"></i>
                           
                         </a>  <a class="delete btn btn-sm btn-danger" href="<?php echo site_url('User/deleteuser/'.$val['id']); ?>">
                           <i class="icons-office-52"></i></a>
-                        </td>
+                        </td> -->
                        
                      
 

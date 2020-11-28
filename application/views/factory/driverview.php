@@ -2,14 +2,14 @@
    <!-- BEGIN PAGE CONTENT -->
    <div class="page-content">
           <div class="header">
-            <h2>Contractor <strong>List</strong></h2>
+            <h2>Driver <strong>List</strong></h2>
             <div class="breadcrumb-wrapper">
               <ol class="breadcrumb">
-                <li><a href="dashboard.html">Contractor</a>
+                <li><a href="dashboard.html">Driver</a>
                 </li>
-                <li><a href="tables.html">Contractor</a>
+                <li><a href="tables.html">Driver</a>
                 </li>
-                <li class="active">Contractor View</li>
+                <li class="active">Driver View</li>
               </ol>
             </div>
           </div>

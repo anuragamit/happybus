@@ -6,7 +6,7 @@
     <meta name="description" content="admin-themes-lab">
     <meta name="author" content="themes-lab">
     <link rel="shortcut icon" href="<?php echo base_url();?>assets/global/images/favicon.png" type="image/png">
-    <title>Happy &amp; Happy</title>
+    <title>HappyBus &amp; HappyBus</title>
     <link href="<?php echo base_url();?>assets/global/css/style.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/global/css/theme.css" rel="stylesheet">
     <link href="<?php echo base_url();?>assets/global/css/ui.css" rel="stylesheet">
@@ -190,6 +190,18 @@ if($this->session->userType==4){
                
               </ul>
             </li>
+
+
+            <li class="nav-parent">
+              <a href="#"><i class="icon-puzzle"></i><span>Driver Management</span> <span class="fa arrow"></span></a>
+              <ul class="children collapse">
+                <li><a href="<?=base_url();?>adddriver">Add Driver</a></li>
+                <li><a href="<?=base_url();?>driverview">Driver List</a></li>
+               
+              </ul>
+            </li>
+
+
 
 <?php
 }

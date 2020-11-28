@@ -71,7 +71,7 @@
                         
                           <td class="hidden-1024"><?=$val['email'];?></td>
                           <td class="hidden-1024"><?=$val['mobile'];?></td>
-                          <td class="hidden-1024"><?=$val['identity'];?></td>
+                          <td class="hidden-1024"><img src="<?php echo base_url();?>assetsupload/<?=$val['identity'];?>" style="height:60px; width:60px;"></td>
                           <td class="hidden-1024"><?=$val['relationship'];?></td>
                           <td class="hidden-1024"><?=$val['create_date'];?></td>
                         

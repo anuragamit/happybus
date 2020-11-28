@@ -69,7 +69,8 @@ $route['factoryaddUser'] = 'Factory/addfactory';
 $route['factoryview'] = 'Factory/factoryview';
 $route['addContractor'] = 'Factory/addContractor';
 $route['contractorview'] = 'Factory/contractorview';
-$route['addsubontractor'] = 'Factory/addsubontractor';
+$route['addsubContractor'] = 'Factory/addsubContractor';
+$route['subcontractorview'] = 'Factory/subcontractorview';
 
 $route['factoryRegister'] = 'Registration/factoryregistration';
 $route['factoryLogin'] = 'Login/factory_login';

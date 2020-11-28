@@ -185,8 +185,8 @@ if($this->session->userType==4){
               <ul class="children collapse">
                 <li><a href="<?=base_url();?>addContractor">Add Contractor</a></li>
                 <li><a href="<?=base_url();?>contractorview">Contractor List</a></li>
-                <li><a href="<?=base_url();?>factoryaddUser"> Add Sub Contractor</a></li>
-                <li><a href="<?=base_url();?>factoryaddUser">Sub Contractor List</a></li>
+                <li><a href="<?=base_url();?>addsubContractor"> Add Sub Contractor</a></li>
+                <li><a href="<?=base_url();?>subcontractorview">Sub Contractor List</a></li>
                
               </ul>
             </li>

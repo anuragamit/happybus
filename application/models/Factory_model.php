@@ -135,10 +135,50 @@ public function viewcontractor(){
 }
 
 
+public function savesubContractor(){
+
+	
+
+	$data['name'] = $this->input->post('name');
+	$data['email'] = $this->input->post('email');
+	$data['mobile'] = $this->input->post('mobile');
+	
+	$data['address'] = $this->input->post('address');
+	$data['identity'] = $this->input->post('identity');
+	$data['relationship'] = $this->input->post('relationship');
+	$data['contractor_id'] = $this->input->post('contractor_id');
+	
+	
+	$this->db->insert('subcontractor', $data);
+	return $data;
+
+
+
+}
+
+
+public function viewsubcontractor(){
+
+	$this->db->select('*');
+	$this->db->from('subcontractor');
+	//$this->db->where('deleted', 'N');
+	//$this->db->where('mob', $mobile);
+	
+	
+	$this->db->order_by('id', 'DESC');
+	
+	$query = $this->db->get();
+	// echo  $this->db->last_query(); die;  
+
+	if ($query->num_rows() > 0) {
+		return $query->result_array();
+	}
 
 
 
 
+
+}
 
 
 

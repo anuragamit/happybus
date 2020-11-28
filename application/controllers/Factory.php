@@ -156,11 +156,10 @@ public function contractorview(){
 
 
 }
-public function addsubontractor(){
+public function addsubContractor(){
 
+   
 
-
-  
   // set form validation rules
   $this->form_validation->set_rules('name', 'Contractor Name', 'trim|required');
   $this->form_validation->set_rules('address', 'Address', 'trim|required');
@@ -171,10 +170,15 @@ public function addsubontractor(){
   // submit
   if ($this->form_validation->run() == FALSE)
   {
+    $post    = $this->input->post();
+    $data['MainArray']=$this->Factory_model->viewcontractor($post);
+
+   
+
       // fails
      // $this->load->view('client_registration');
      $this->load->view('include/main_header');
- $this->load->view('factory/addcontractor');
+ $this->load->view('factory/addsubcontractor',$data);
  $this->load->view('include/footer');
   }
   
@@ -188,24 +192,39 @@ public function addsubontractor(){
           'address' => $this->input->post('address'),
           'email' => $this->input->post('email'),
           'mobile' => $this->input->post('mobile'),
-          'identity' => $this->input->post('identity')
+          'identity' => $this->input->post('identity'),
+          'relationship' => $this->input->post('relationship'),
+          'contractor_id' => $this->input->post('contractor_id')
         
       );
+
      
-     
-      if ($this->Factory_model->saveContractor($data))
+
+    
+      if ($this->Factory_model->savesubContractor($data))
       {
           $this->session->set_flashdata('msg','<div class="alert alert-success text-center">You are Successfully Added! </div>');
-          redirect('addContractor');
+          redirect('subcontractorview');
       }
       else
       {
           // error
           $this->session->set_flashdata('msg','<div class="alert alert-danger text-center">Oops! Error.  Please try again later!!!</div>');
-          redirect('addContractor');
+          redirect('subcontractorview');
       }
   }
 
+}
+
+public function subcontractorview(){
+
+    $post    = $this->input->post();
+    $data['MainArray']=$this->Factory_model->viewsubcontractor($post);
+
+ 
+    $this->load->view('include/main_header');
+    $this->load->view('factory/subcontractorview',$data);
+    $this->load->view('include/footer');
 
 
 
